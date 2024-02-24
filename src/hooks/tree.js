@@ -2,8 +2,8 @@ const useTree = () => {
   const insert = function (tree, commentId, item) {
     if (tree.id === commentId) {
       tree.items.push({
-        id: new Date(),
-        // createdAt: new Date().toLocaleString(),
+        id: Date.now(),
+        createdAt: new Date(Date.now()).toLocaleString(),
         text: item,
         items: [],
       });

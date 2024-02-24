@@ -3,21 +3,8 @@ import useTree from "./hooks/tree";
 import { Comment } from "./components/Comment";
 
 const commentDB = {
-  id: 1,
-  // text: "This is a comment",
-  // items: [{
-  //   id: 98490384983493,
-  //   text: "This is a comment 2",
-  //   items: [{
-  //     id: 98490384983494,
-  //     text: "This is a reply",
-  //     items: [{
-  //       id: 98490384983495,
-  //       text: "This is a reply to the reply",
-  //       items: [],
-  //     }],
-  //   }]
-  // }]
+  id: 1708809675737,
+  createdAt: new Date(1708809675737).toLocaleString(),
   items: [],
 };
 

@@ -34,7 +34,7 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
 
   return (
     <div className="flex flex-col p-4">
-      {data.id === 1 ? (
+      {data.id <= 1708809675737 ? (
         <div className="w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
           <div className="ml-3 flex">
             <div className="mr-3">
@@ -48,7 +48,7 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
             </div>
             <div>
               <h1 className="font-semibold">Adhiraj</h1>
-              {/* <p className="text-xs text-gray-500">{data.id}</p> */}
+              <p className="text-xs text-gray-600">{data.createdAt}</p>
             </div>
           </div>
           <div className="mt-3 w-full p-3">
@@ -81,6 +81,7 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
             </div>
             <div>
               <h1 className="font-semibold">Adhiraj</h1>
+              <p className="text-xs text-gray-600">{data.createdAt}</p>
               {/* <p className="text-xs text-gray-500">{data.id}</p> */}
             </div>
           </div>
@@ -113,6 +114,7 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
               </div>
               <div>
                 <h1 className="font-semibold">Adhiraj</h1>
+                <p className="text-xs text-gray-600">{data.createdAt}</p>
                 {/* <p className="text-xs text-gray-500">{data.id}</p> */}
               </div>
             </div>
