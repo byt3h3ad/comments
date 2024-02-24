@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import { Button } from "./Button";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export const Comment = ({ handleInsert, handleDelete, data }) => {
   const [inp, setInp] = useState("");
@@ -35,8 +35,8 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
   return (
     <div className="flex flex-col p-4">
       {data.id === 1 ? (
-        <div className="w-1/2 bg-white p-2 pt-4 rounded shadow-lg">
-          <div className="flex ml-3">
+        <div className="w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
+          <div className="ml-3 flex">
             <div className="mr-3">
               <img
                 src="/avatar.jpg"
@@ -51,25 +51,25 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
               {/* <p className="text-xs text-gray-500">{data.id}</p> */}
             </div>
           </div>
-          <div className="mt-3 p-3 w-full">
+          <div className="mt-3 w-full p-3">
             <textarea
               rows="3"
-              className="border p-2 rounded w-full"
+              className="w-full rounded border p-2"
               placeholder="Write something..."
               value={inp}
               onChange={(e) => setInp(e.target.value)}
             ></textarea>
           </div>
 
-          <div className="flex justify-end mx-3">
+          <div className="mx-3 flex justify-end">
             <div>
               <Button handleClick={postComment}>Submit</Button>
             </div>
           </div>
         </div>
       ) : (
-        <div className="w-1/2 bg-white p-2 pt-4 rounded shadow-lg">
-          <div className="flex ml-3">
+        <div className="w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
+          <div className="ml-3 flex">
             <div className="mr-3">
               <img
                 src="/avatar.jpg"
@@ -84,11 +84,11 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
               {/* <p className="text-xs text-gray-500">{data.id}</p> */}
             </div>
           </div>
-          <div className="mt-3 p-3 w-full">
-            <div className="p-2 bg-gray-100 rounded">{data.text}</div>
+          <div className="mt-3 w-full p-3">
+            <div className="rounded bg-gray-100 p-2">{data.text}</div>
           </div>
 
-          <div className="flex justify-end gap-2 mx-3">
+          <div className="mx-3 flex justify-end gap-2">
             <Button handleClick={handleReply}>Reply</Button>
             <Button handleClick={deleteComment}>Delete</Button>
             <Button handleClick={handleBookmark}>
@@ -100,8 +100,8 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
 
       <div className="pl-24">
         {newComment && (
-          <div className="w-1/2 bg-white p-2 pt-4 rounded shadow-lg">
-            <div className="flex ml-3">
+          <div className="w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
+            <div className="ml-3 flex">
               <div className="mr-3">
                 <img
                   src="/avatar.jpg"
@@ -116,17 +116,17 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
                 {/* <p className="text-xs text-gray-500">{data.id}</p> */}
               </div>
             </div>
-            <div className="mt-3 p-3 w-full">
+            <div className="mt-3 w-full p-3">
               <textarea
                 rows="2"
-                className="border p-2 rounded w-full"
+                className="w-full rounded border p-2"
                 placeholder="Write something..."
                 value={inp}
                 onChange={(e) => setInp(e.target.value)}
               ></textarea>
             </div>
 
-            <div className="flex justify-end gap-2 mx-3">
+            <div className="mx-3 flex justify-end gap-2">
               <Button handleClick={postComment}>Reply</Button>
               <Button handleClick={() => setNewComment(false)}>Cancel</Button>
             </div>
@@ -146,4 +146,10 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
       </div>
     </div>
   );
+};
+
+Comment.propTypes = {
+  handleInsert: PropTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
 };
