@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useTree from "./hooks/tree";
+import useTree from "./hooks/useTree";
 import { Comment } from "./components/Comment";
 
 const commentDB = {

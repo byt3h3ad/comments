@@ -1,6 +1,7 @@
-import { Button } from "./Button";
 import { useState } from "react";
+// import { useLocalStorage } from "../hooks/useLocalStorage";
 import PropTypes from "prop-types";
+import { Button } from "./Button";
 
 export const Comment = ({ handleInsert, handleDelete, data }) => {
   const [inp, setInp] = useState("");
@@ -35,7 +36,7 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
   return (
     <div className="flex flex-col p-4">
       {data.id <= 1708809675737 ? (
-        <div className="w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
+        <div className="m-auto w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
           <div className="ml-3 flex">
             <div className="mr-3">
               <img
@@ -68,7 +69,7 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
           </div>
         </div>
       ) : (
-        <div className="w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
+        <div className="m-auto w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
           <div className="ml-3 flex">
             <div className="mr-3">
               <img
@@ -101,7 +102,7 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
 
       <div className="pl-24">
         {newComment && (
-          <div className="w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
+          <div className="m-auto w-1/2 rounded bg-white p-2 pt-4 shadow-lg">
             <div className="ml-3 flex">
               <div className="mr-3">
                 <img
