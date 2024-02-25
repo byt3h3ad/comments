@@ -83,7 +83,6 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
             <div>
               <h1 className="font-semibold">Adhiraj</h1>
               <p className="text-xs text-gray-600">{data.createdAt}</p>
-              {/* <p className="text-xs text-gray-500">{data.id}</p> */}
             </div>
           </div>
           <div className="mt-3 w-full p-3">
@@ -116,7 +115,6 @@ export const Comment = ({ handleInsert, handleDelete, data }) => {
               <div>
                 <h1 className="font-semibold">Adhiraj</h1>
                 <p className="text-xs text-gray-600">{data.createdAt}</p>
-                {/* <p className="text-xs text-gray-500">{data.id}</p> */}
               </div>
             </div>
             <div className="mt-3 w-full p-3">
